@@ -97,38 +97,79 @@ Here is another comment.
 
 ---
 
-# 原子化 CSS?
+# 什么是原子化 CSS?
 
-原子化 CSS 是一种将样式拆分为最小单元的方法
+<v-clicks every="1">
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+首先，让我们为 **原子化 CSS (Atomic CSS)** 给出适当的定义：
+
+John Polacek 在文章 [ Let’s Define Exactly What Atomic CSS is?](https://css-tricks.com/lets-define-exactly-atomic-css/)
+
+> Atomic CSS is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.
+
+译文: 原子化 CSS 是一种 CSS 的架构方式，它倾向于小巧且用途单一的 class，并且会以视觉效果进行命名。
+
+</v-clicks>
+
+<v-clicks every="1">
+
+- 可复用性高
+
+- 响应式设计友好
+
+- 可维护性高
+
+- 减少CSS命名的烦恼
+
+- 性能优化
+
+  - 减少了CSS解析和渲染的复杂度
+  - 有利于提高页面加载和渲染速度
+
+</v-clicks>
+
+  <style>
+  h1 {
+    background-color: #2B90B6;
+    background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+	.slidev-vclick-target {
+		transition: all 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
+	}
+
+	.slidev-vclick-hidden {
+		transform: translateY(50%);
+		opacity: 0;
+	}
+  </style>
 
 ---
 
-# Navigation
+# Tailwind CSS 简介
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<v-clicks every="1">
 
-## Keyboard Shortcuts
+Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
 
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
+> It's fast, flexible, and reliable — with zero-runtime.
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
+</v-clicks>
+
+<v-clicks every="1">
+
+```vue {monaco}
+<template>
+	<div class="">Hello World</div>
+</template>
+```
+
+</v-clicks>
 
 <img
   v-click
@@ -606,8 +647,10 @@ dragPos:
 square: -92,0,0,0
 
 ---
+
 dragPos:
-  square: -92,0,0,0
+square: -92,0,0,0
+
 ---
 
 # Draggable Elements
@@ -656,7 +699,6 @@ src: ./pages/imported-slides.md
 hide: false
 
 ---
-
 
 ---
 
